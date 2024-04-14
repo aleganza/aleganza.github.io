@@ -31,7 +31,7 @@ fetch("https://api.github.com/users/aleganza/repos").then(async res => {
 const now = new Date();
 
 let elapsedYears = now.getFullYear() - 2003;
-if (now.getMonth() < 3 || (now.getMonth() == 3 && now.getDate() < 2)) {
+if (now.getMonth() < 4 || (now.getMonth() == 4 && now.getDate() < 13)) {
     elapsedYears--;
 }
 
