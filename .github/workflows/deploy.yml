@@ -3,7 +3,7 @@ name: GitHub Pages Deployment
 on:
   push:
     branches:
-      - main  # Cambia questo se stai usando un'altra branch
+      - main
 
 permissions:
   id-token: write
@@ -31,6 +31,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: main  # Cambia questo se stai usando una branch diversa per le GitHub Pages
           FOLDER: dist  # Cartella contenente il sito compilato
