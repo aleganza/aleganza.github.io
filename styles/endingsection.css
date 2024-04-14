@@ -1,0 +1,24 @@
+.ending-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 50px;
+
+    background-color: var(--panel-colour);
+    font-family: "Inter";
+    color: white;
+}
+
+.ending-section.credits,
+.ending-section.credits a {
+  color: rgb(178, 178, 178)
+}
+
+.ending-section.credits a:hover {
+  opacity: 0.8;
+}
+
+.ending-section img {
+    border-radius: 100%;
+}
