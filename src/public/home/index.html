@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>aleganza</title>
+
+  <link rel="stylesheet" href="/static/global.css">
+  <link rel="stylesheet" href="/static/navbar.css">
+
+  <link rel="stylesheet" href="/static/home/styles/index.css">
+  <link rel="stylesheet" href="/static/home/styles/frontsection.css">
+  <link rel="stylesheet" href="/static/home/styles/aboutsection.css">
+  <link rel="stylesheet" href="/static/home/styles/videosection.css">
+  <link rel="stylesheet" href="/static/home/styles/stationsection.css">
+  <link rel="stylesheet" href="/static/home/styles/endingsection.css">
+
+  <!-- <link rel="shortcut icon" href="/static/favicon.ico"> -->
+</head>
+
+<body>
+
+  <div class="nav-bar">
+    <div class="nav-title">
+      <!-- <img class="logo" src="/static/twigwhite.png" height="50"> -->
+      <b class="title">aleganza</b>
+    </div>
+
+    <div class="nav-tabs">
+      <span class="standard-nav-button about-me-button" data-url="#about">👋🏻 About Me</span>
+      <span class="standard-nav-button station-button" data-url="#station">🚅 Station</span>
+      <!-- <span class="primary-button" data-url="/course">📚 Course</span> -->
+    </div>
+  </div>
+
+  <section class="front-section">
+    <img src="/static/monkey.png" class="hot-chocolate" height="175">
+
+    <h1 class="welcome-message">hi, i'm Alessio.</h1>
+
+    <div class="socials-container">
+      <div class="social" title="My GitHub" data-url="https://github.com/aleganza">
+        <img src="/static/github.svg" alt="GH" height="30">
+      </div>
+      <div class="social" title="My Instagram" data-url="https://instagram.com/aleganza_">
+        <img src="/static/instagram.svg" alt="IG" height="30" style="transform:scale(1.1)">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h1>A bit about me</h1>
+
+    <div class="details-container">
+      <div>
+        <img class="profile-image" src="https://avatars.githubusercontent.com/u/73157384?v=4" height="250"
+          title="aleganza">
+
+        <div class="languages-container">
+          <img src="/static/javascript.png" alt="JS" height="40" title="JavaScript">
+          <img src="/static/typescript.png" alt="JS" height="40" title="TypeScript">
+          <img src="/static/python.png" alt="JS" height="40" title="Python">
+        </div>
+      </div>
+
+      <div>
+        <div class="statistic">
+          <b class="statistic-repositories">Some</b>
+          <span class="statistic-name">Git repositories</span>
+        </div>
+
+        <div class="statistic">
+          <b class="statistic-code-size">Lots</b>
+          <span class="statistic-name">of stuff committed</span>
+        </div>
+
+        <div class="details">
+          Hello! I'm Alessio. I'm
+          <span class="age"></span>
+          years old and I like to develop websites, among other
+          random things... I've been programming using Python for 4 years now, and
+          JavaScript/TypeScript for 2 of those. Sometimes I enjoy documenting how I get around
+          to building something through YouTube, and outside of coding I love to play Chess!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="station" class="station-section">
+    <h1>Where do you want to go?</h1>
+    <span class="station-clarification-message">(My Projects)</span>
+
+    <div class="projects-container">
+      <div class="project">
+        <img src="/static/akuseicon.png" alt="" class="project-icon">
+        <!-- <span class="project-icon">♟️</span> -->
+
+        <div class="project-details">
+          <b class="project-title">Akuse</b>
+
+          <a class="project-link" href="https://github.com/akuse-app/Akuse">https://github.com/akuse-app/Akuse</a>
+
+          <span class="project-description">
+            💻 Simple and easy to use anime streaming desktop app without ads.
+          </span>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="/static/poaicon.gif" alt="" class="project-icon">
+
+        <div class="project-details">
+          <b class="project-title">Plenty Of Armors</b>
+
+          <a class="project-link"
+            href="https://www.curseforge.com/minecraft/mc-mods/plenty-of-armors">https://www.curseforge.com/minecraft/mc-mods/plenty-of-armors</a>
+
+          <span class="project-description">
+            ⛏ A fabric Minecraft mod with plenty of new vanilla-faithful armors sets and custom effects applied.
+          </span>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="/static/saltaebbastaicon.jpg" alt="" class="project-icon">
+
+        <div class="project-details">
+          <b class="project-title">Salta Ebbasta</b>
+
+          <a class="project-link"
+            href="https://apps.apple.com/it/app/lil-run/id1493271518">https://apps.apple.com/it/app/lil-run/id1493271518</a>
+
+          <span class="project-description">
+            🥤 The first game for App Store and Play Store featuring over 50 artists from the Italian Rap scene.
+          </span>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="/static/galileiicon.jpg" alt="" class="project-icon">
+
+        <div class="project-details">
+          <b class="project-title">Galilei: The Game</b>
+
+          <a class="project-link"
+            href="https://the-galilei-project.github.io/">https://the-galilei-project.github.io/</a>
+
+          <span class="project-description">
+            👾 16-bit IISS Galileo Galilei (Ostiglia, MN, Italy) simulator.
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="ending-section">
+    <img src="/static/twigwhite.png" height="40">
+    <span>aleganza</span>
+  </section> -->
+
+  <section class="ending-section credits">
+    <span>Based on <a href="https://wintrcat.uk/" target="_blank">WintrCat</a></span>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="/static/navbar.js"></script>
+  <script src="/static/home/scripts/socials.js"></script>
+  <script src="/static/home/scripts/video.js"></script>
+  <script src="/static/home/scripts/statistics.js"></script>
+
+</body>
+
+</html>
