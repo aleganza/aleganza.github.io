@@ -5,7 +5,7 @@ on: [push]
 permissions:
   id-token: write
   pages: write
-  contents: read
+  contents: write
 
 jobs:
   Explore-GitHub-Actions:
