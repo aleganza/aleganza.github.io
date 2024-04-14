@@ -1,9 +1,6 @@
-name: GitHub Pages Deployment
-
-on:
-  push:
-    branches:
-      - main
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
 
 permissions:
   id-token: write
@@ -11,25 +8,34 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "18"
 
-      - name: Install Dependencies
-        run: npm install
+      - run: npm install
 
-      - name: Build
-        run: npm run build
+      - run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: website
+          path: dist
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        id: deployment
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          BRANCH: main  # Cambia questo se stai usando una branch diversa per le GitHub Pages
-          FOLDER: dist  # Cartella contenente il sito compilato
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: dist
+          cleanup: false
