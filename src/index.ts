@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import dotenv from "dotenv";
+import serverless from "serverless-http";
 dotenv.config();
 
 import videoRouter from "./routes/video";
@@ -22,6 +23,8 @@ app.get("/", (req, res) => {
 app.get("/course", (req, res) => {
     res.sendFile(path.resolve("src/public/course/index.html"));
 });
+
+export const handler = serverless(app);
 
 app.listen(process.env.PORT, () => {
     console.log("Server running on port " + process.env.PORT);
