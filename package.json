@@ -6,13 +6,16 @@
     "express": "^4.19.2",
     "netlify-lambda": "^2.0.16",
     "path": "^0.12.7",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^5.0.5",
     "serverless-http": "^3.2.0",
     "typescript": "^5.4.5"
   },
   "scripts": {
     "start": "tsc && node dist/index.js",
-    "build": "tsc",
-    "netlify-build": "tsc && ./node_modules/.bin/netlify-lambda build dist"
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.29"
