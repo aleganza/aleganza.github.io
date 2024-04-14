@@ -13,6 +13,8 @@ app.use("/static",
     express.static("dist/public")
 );
 
+// app.use(express.static(__dirname + "/public/"));
+
 app.use(videoRouter);
 
 app.get("/", (req, res) => {
